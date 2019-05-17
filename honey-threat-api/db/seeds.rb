@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# https://intercept.sh/threatlists/
+
 Threat.create([
   {ip: "159.65.103.189", count: 101, lat: "37.3501", long: "-121.9850", country: "United States"},
   {ip: "112.170.78.118", count: 100, lat: "37.4100", long: "127.2570", country: "South Korea"},
