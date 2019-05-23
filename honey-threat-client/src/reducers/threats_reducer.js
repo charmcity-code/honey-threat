@@ -1,7 +1,10 @@
 export default (state = [], action) => {
   switch (action.type) {
-    case "GET_THREATS_SUCCESS":
+    case "SET_THREATS":
       return action.threats;
+
+    case "ADD_THREAT":
+      return state.concat(action.threat);
 
     default:
       return state;
