@@ -1,11 +1,13 @@
 import React from "react";
 
 const ThreatCard = ({ threat }) => (
-  <div>
-    <p key={threat.id}>
-      IP address: {threat.ip} Count: {threat.count} {threat.country}
-    </p>
-  </div>
+  <tbody>
+    <tr>
+      <td>{threat.ip}</td>
+      <td>{threat.count}</td>
+      <td>{threat.country}</td>
+    </tr>
+  </tbody>
 );
 
 export default ThreatCard;

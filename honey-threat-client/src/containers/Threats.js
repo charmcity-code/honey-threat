@@ -5,6 +5,7 @@ import ThreatCard from "../components/ThreatCard";
 import ThreatForm from "./ThreatForm";
 import { getThreats } from "../actions/threatActions";
 import MapContainer from "./MapContainer";
+import Table from "react-bootstrap/Table";
 
 class Threats extends Component {
   componentDidMount() {
@@ -15,10 +16,24 @@ class Threats extends Component {
     return (
       <div>
         <h3>Threats Component</h3>
-        {this.props.threats.map(threat => (
-          <ThreatCard key={threat.id} threat={threat} />
-        ))}
+        <Table size='sm' responsive='sm' variant='dark'>
+          <thead>
+            <tr>
+              <th>IP Address</th>
+              <th>Count</th>
+              <th>Country</th>
+            </tr>
+          </thead>
+
+          {this.props.threats.map(threat => (
+            // <Col>
+            <ThreatCard key={threat.id} threat={threat} />
+            // </Col>
+          ))}
+        </Table>
+
         <MapContainer />
+
         <ThreatForm />
       </div>
     );
