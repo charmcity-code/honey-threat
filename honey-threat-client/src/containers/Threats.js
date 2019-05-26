@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import ThreatCard from "../components/ThreatCard";
 import ThreatForm from "./ThreatForm";
 import { getThreats } from "../actions/threatActions";
+import MapContainer from "./MapContainer";
 
 class Threats extends Component {
   componentDidMount() {
@@ -17,6 +18,7 @@ class Threats extends Component {
         {this.props.threats.map(threat => (
           <ThreatCard key={threat.id} threat={threat} />
         ))}
+        <MapContainer />
         <ThreatForm />
       </div>
     );
