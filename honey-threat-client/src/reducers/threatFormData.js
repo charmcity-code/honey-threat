@@ -1,6 +1,6 @@
 const initialState = {
   ip: "",
-  count: getRndInteger(1, 1000),
+  count: 1,
   lat: "",
   long: "",
   country: "Unknown \u{1F3F4}"
@@ -15,7 +15,8 @@ export default (state = initialState, action) => {
     case "UPDATED_DATA":
       return {
         ...state,
-        ip: action.threatFormData.ip
+        ip: action.threatFormData.ip,
+        count: getRndInteger(1, 1000)
       };
 
     case "RESET_FORM":
