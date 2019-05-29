@@ -6,6 +6,9 @@ export default (state = [], action) => {
     case "ADD_THREAT":
       return state.concat(action.threat);
 
+    case "DELETE_THREAT":
+      return state.filter(threat => threat.id !== action.id);
+
     default:
       return state;
   }

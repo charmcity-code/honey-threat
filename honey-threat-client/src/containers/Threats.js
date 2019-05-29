@@ -18,7 +18,11 @@ class Threats extends Component {
         <h3>Honeypot Threatlist</h3>
         <CardColumns>
           {this.props.threats.map(threat => (
-            <ThreatCard key={threat.id} threat={threat} />
+            <ThreatCard
+              key={threat.id}
+              threat={threat}
+              deleteThreat={this.props.deleteThreat}
+            />
           ))}
         </CardColumns>
         <MapContainer />
@@ -34,7 +38,16 @@ const mapStateToProps = state => {
   };
 };
 
+const mapDispatchToProps = dispatch => {
+  return {
+    getThreats: () => {
+      dispatch(getThreats());
+    },
+    deleteThreat: id => dispatch({ type: "DELETE_THREAT", id })
+  };
+};
+
 export default connect(
   mapStateToProps,
-  { getThreats }
+  mapDispatchToProps
 )(Threats);

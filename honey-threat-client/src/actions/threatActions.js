@@ -15,6 +15,13 @@ const addThreat = threat => {
   };
 };
 
+const deleteThreat = id => {
+  return {
+    type: "DELETE_THREAT",
+    id
+  };
+};
+
 // async action creators
 export const getThreats = () => {
   return dispatch => {
