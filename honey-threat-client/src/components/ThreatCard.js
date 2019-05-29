@@ -13,7 +13,9 @@ class ThreatCard extends Component {
         <Card.Header>{threat.country}</Card.Header>
         <Card.Body>
           <Card.Title>{threat.ip}</Card.Title>
-          <Card.Text>Count: {threat.count}</Card.Text>
+          <Card.Text style={{ color: threat.count >= 750 ? "red" : "orange" }}>
+            Count: {threat.count}
+          </Card.Text>
           <Card.Text>
             <button onClick={this.handleClick}> Delete </button>
           </Card.Text>
