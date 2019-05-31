@@ -34,7 +34,7 @@ class Api::ThreatsController < ApplicationController
   end
 
   def threat_params
-    params.require(:threat).permit(:ip, :count, :lat, :long, :country)
+    params.require(:threat).permit(:ip, :count, :lat, :long, :address)
   end
 
 end

@@ -5,7 +5,7 @@ class CreateThreats < ActiveRecord::Migration[5.2]
       t.integer :count
       t.string :lat
       t.string :long
-      t.string :country
+      t.string :address
 
       t.timestamps
     end

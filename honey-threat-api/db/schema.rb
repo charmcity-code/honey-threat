@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2019_05_17_202247) do
     t.integer "count"
     t.string "lat"
     t.string "long"
-    t.string "country"
+    t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
