@@ -3,7 +3,7 @@ const initialState = {
   count: 1,
   lat: "",
   long: "",
-  country: "Unknown \u{1F3F4}"
+  address: ""
 };
 
 function getRndInteger(min, max) {
@@ -16,7 +16,10 @@ export default (state = initialState, action) => {
       return {
         ...state,
         ip: action.threatFormData.ip,
-        count: getRndInteger(1, 1000)
+        count: getRndInteger(1, 1000),
+        address: action.threatFormData.address,
+        lat: action.threatFormData.lat,
+        long: action.threatFormData.long
       };
 
     case "RESET_FORM":
