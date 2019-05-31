@@ -10,7 +10,7 @@ class ThreatCard extends Component {
     const { threat } = this.props;
     return (
       <Card border='dark' bg='light' style={{ width: "25rem" }}>
-        <Card.Header>{threat.country}</Card.Header>
+        <Card.Header>{threat.address}</Card.Header>
         <Card.Body>
           <Card.Title>{threat.ip}</Card.Title>
           <Card.Text style={{ color: threat.count >= 750 ? "red" : "orange" }}>
