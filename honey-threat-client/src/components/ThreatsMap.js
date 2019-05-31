@@ -8,10 +8,11 @@ const ThreatsMap = withScriptjs(
       <ThreatMarker
         key={threat.id}
         location={{ lat: parseFloat(threat.lat), lng: parseFloat(threat.long) }}
+        ip={threat.ip}
       />
     ));
     return (
-      <GoogleMap defaultZoom={2} center={{ lat: 25.7617, lng: -80.1918 }}>
+      <GoogleMap defaultZoom={4} center={{ lat: 39.8283, lng: -98.5795 }}>
         {markers}
       </GoogleMap>
     );
