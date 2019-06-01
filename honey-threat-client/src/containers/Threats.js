@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import ThreatCard from "../components/ThreatCard";
 import ThreatForm from "./ThreatForm";
-import { getThreats } from "../actions/threatActions";
+import { getThreats, destroyThreat } from "../actions/threatActions";
 import MapContainer from "./MapContainer";
 import CardColumns from "react-bootstrap/CardColumns";
 
@@ -21,7 +21,7 @@ class Threats extends Component {
             <ThreatCard
               key={threat.id}
               threat={threat}
-              deleteThreat={this.props.deleteThreat}
+              destroyThreat={this.props.destroyThreat}
             />
           ))}
         </CardColumns>
@@ -43,7 +43,7 @@ const mapDispatchToProps = dispatch => {
     getThreats: () => {
       dispatch(getThreats());
     },
-    deleteThreat: id => dispatch({ type: "DELETE_THREAT", id })
+    destroyThreat: id => dispatch(destroyThreat(id))
   };
 };
 
