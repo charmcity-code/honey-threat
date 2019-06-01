@@ -27,6 +27,15 @@ class Api::ThreatsController < ApplicationController
     end
   end
 
+  def destroy
+    @threat = Threat.find(params[:id])
+    if @threat.destroy
+      render status: 204
+    else
+      render json: { message: "Unable to remove this threat" }, status: 400
+    end
+  end
+
   private
 
   def set_threat
