@@ -1,6 +1,6 @@
 const initialState = {
   ip: "",
-  count: 1,
+  count: "",
   lat: "",
   long: "",
   address: ""
