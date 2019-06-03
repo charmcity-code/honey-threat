@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import ThreatCard from "../components/ThreatCard";
-import ThreatForm from "./ThreatForm";
 import { getThreats, destroyThreat } from "../actions/threatActions";
-import MapContainer from "./MapContainer";
-import CardColumns from "react-bootstrap/CardColumns";
+import Table from "react-bootstrap/Table";
+import "./App.css";
 
 class Threats extends Component {
   componentDidMount() {
@@ -15,8 +14,15 @@ class Threats extends Component {
   render() {
     return (
       <div>
-        <h3>Honeypot Threatlist</h3>
-        <CardColumns>
+        <Table style={{ width: 550 }} striped bordered hover size='sm'>
+          <thead>
+            <tr>
+              <th>IP</th>
+              <th>Location</th>
+              <th>Count</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
           {this.props.threats.map(threat => (
             <ThreatCard
               key={threat.id}
@@ -24,9 +30,7 @@ class Threats extends Component {
               destroyThreat={this.props.destroyThreat}
             />
           ))}
-        </CardColumns>
-        <MapContainer />
-        <ThreatForm />
+        </Table>
       </div>
     );
   }
