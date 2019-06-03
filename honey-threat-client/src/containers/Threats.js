@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import ThreatCard from "../components/ThreatCard";
 import { getThreats, destroyThreat } from "../actions/threatActions";
-import Table from "react-bootstrap/Table";
+import { MDBTable, MDBTableHead } from "mdbreact";
 import "./App.css";
 
 class Threats extends Component {
@@ -14,15 +14,15 @@ class Threats extends Component {
   render() {
     return (
       <div>
-        <Table style={{ width: 550 }} striped bordered hover size='sm'>
-          <thead>
+        <MDBTable style={{ width: 550 }} bordered small responsive>
+          <MDBTableHead>
             <tr>
               <th>IP</th>
               <th>Location</th>
               <th>Count</th>
               <th>Delete</th>
             </tr>
-          </thead>
+          </MDBTableHead>
           {this.props.threats.map(threat => (
             <ThreatCard
               key={threat.id}
@@ -30,7 +30,7 @@ class Threats extends Component {
               destroyThreat={this.props.destroyThreat}
             />
           ))}
-        </Table>
+        </MDBTable>
       </div>
     );
   }

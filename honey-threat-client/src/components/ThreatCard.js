@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Button from "react-bootstrap/Button";
+import { MDBTableBody } from "mdbreact";
+import { MDBBtn } from "mdbreact";
 
 class ThreatCard extends Component {
   handleClick = () => {
@@ -9,7 +10,7 @@ class ThreatCard extends Component {
   render() {
     const { threat } = this.props;
     return (
-      <tbody>
+      <MDBTableBody>
         <tr>
           <td>{threat.ip}</td>
           <td>{threat.address}</td>
@@ -17,16 +18,12 @@ class ThreatCard extends Component {
             {threat.count}
           </td>
           <td>
-            <Button
-              onClick={this.handleClick}
-              variant='outline-danger'
-              size='sm'
-            >
+            <MDBBtn outline color='danger' size='sm' onClick={this.handleClick}>
               X
-            </Button>
+            </MDBBtn>
           </td>
         </tr>
-      </tbody>
+      </MDBTableBody>
     );
   }
 }
