@@ -19,11 +19,9 @@ class ThreatForm extends Component {
     Geocode.fromAddress(location).then(
       response => {
         this.setState({
-          lat: response.results[0].geometry.location.lat.toString(),
-          long: response.results[0].geometry.location.lng.toString()
+          lat: response.results[0].geometry.location.lat,
+          long: response.results[0].geometry.location.lng
         });
-
-        console.log(this.state.lat, this.state.long);
       },
       error => {
         console.error(error);
@@ -39,7 +37,10 @@ class ThreatForm extends Component {
       lat: this.state.lat,
       long: this.state.long
     });
-    console.log("data: ", currentThreatFormData);
+
+    if (currentThreatFormData.ip === "") {
+      alert("IP cannot be blank.");
+    }
 
     this.getLatLong(this.props.threatFormData.address);
     this.props.updateThreatFormData(currentThreatFormData);
@@ -55,21 +56,20 @@ class ThreatForm extends Component {
       <div>
         Add New IP Threat
         <form onSubmit={this.handleOnSubmit}>
-          <label>IP Address </label>
+          <label>IP Address</label>{" "}
           <input
             name='ip'
             type='text'
             onChange={this.handleOnChange}
             value={this.props.threatFormData.ip}
-          />
-          <label>Location </label>
+          />{" "}
+          <label>Location</label>{" "}
           <input
             name='address'
             type='text'
             onChange={this.handleOnChange}
             value={this.props.threatFormData.address}
-          />
-
+          />{" "}
           <button type='submit'>Submit</button>
         </form>
       </div>
