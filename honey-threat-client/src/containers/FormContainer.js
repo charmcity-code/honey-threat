@@ -53,8 +53,8 @@ class ThreatForm extends Component {
 
   render() {
     return (
-      <div>
-        Add New IP Threat
+      <div className='header'>
+        <h6>Create New Threat</h6>
         <form onSubmit={this.handleOnSubmit}>
           <label>IP Address</label>{" "}
           <input
