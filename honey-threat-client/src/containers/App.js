@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-import Threats from "./Threats";
 import Home from "../components/Home";
 import ThreatForm from "../components/ThreatForm";
 import ThreatIndex from "../components/ThreatIndex";
@@ -15,28 +14,25 @@ class App extends Component {
           <MDBNav>
             <MDBNavItem>
               <MDBNavLink
-                style={{ color: "#0d47a1", "font-weight": "bold" }}
+                style={{ color: "#0d47a1", fontWeight: "bold" }}
                 active
                 to='/'
-                component={Home}
               >
                 Home
               </MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink
-                style={{ color: "#0d47a1", "font-weight": "bold" }}
+                style={{ color: "#0d47a1", fontWeight: "bold" }}
                 to='/threats'
-                component={Threats}
               >
                 Current Threats
               </MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink
-                style={{ color: "#0d47a1", "font-weight": "bold" }}
+                style={{ color: "#0d47a1", fontWeight: "bold" }}
                 to='/threats/new'
-                component={ThreatForm}
               >
                 Create New Threat
               </MDBNavLink>
