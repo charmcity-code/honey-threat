@@ -13,7 +13,7 @@ class MapContainer extends React.Component {
         threats={this.props.threats}
         googleMapURL={`startURL + googleAPI + endURL`}
         loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `500px`, width: `950px` }} />}
+        containerElement={<div style={{ height: `420px`, width: `650px` }} />}
         mapElement={<div style={{ height: `100%` }} />}
       />
     );
