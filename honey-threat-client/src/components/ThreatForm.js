@@ -1,5 +1,4 @@
 import React from "react";
-
 import FormContainer from "../containers/FormContainer";
 import MapContainer from "../containers/MapContainer";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
