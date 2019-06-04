@@ -12,13 +12,13 @@ class ThreatCard extends Component {
     return (
       <MDBTableBody>
         <tr>
-          <td>{threat.ip}</td>
-          <td>{threat.address}</td>
-          <td style={{ color: threat.count >= 667 ? "red" : "orange" }}>
+          <td style={{ color: "#fafafa" }}>{threat.ip}</td>
+          <td style={{ color: "#fafafa" }}>{threat.address}</td>
+          <td style={{ color: threat.count >= 667 ? "#ff8a65" : "#ffeb3b" }}>
             {threat.count}
           </td>
           <td>
-            <MDBBtn outline color='danger' size='sm' onClick={this.handleClick}>
+            <MDBBtn color='danger' size='sm' onClick={this.handleClick}>
               X
             </MDBBtn>
           </td>
