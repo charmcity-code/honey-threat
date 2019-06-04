@@ -37,7 +37,7 @@ export const getThreats = () => {
 
 export const createThreat = threat => {
   return dispatch => {
-    return fetch("http://localhost:3001/api/threats", {
+    return fetch(`${API_URL}/threats`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -55,7 +55,7 @@ export const createThreat = threat => {
 
 export const destroyThreat = id => {
   return dispatch => {
-    return fetch(`http://localhost:3001/api/threats/${id}`, {
+    return fetch(`${API_URL}/threats/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
