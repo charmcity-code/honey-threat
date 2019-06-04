@@ -31,3 +31,22 @@
     transform: rotate(360deg);
   }
 }
+
+html,
+#root {
+  background-color: #1c2331;
+}
+
+.wrapper {
+  background-color: #eeeeee;
+  margin: 16px auto;
+  padding: 1%;
+  width: 95%;
+}
+
+.header {
+  background-color: #3f729b;
+  color: #fafafa;
+  margin-bottom: 20px;
+  padding: 5px 0px;
+}
