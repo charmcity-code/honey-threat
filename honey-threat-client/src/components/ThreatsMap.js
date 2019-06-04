@@ -12,7 +12,7 @@ const ThreatsMap = withScriptjs(
       />
     ));
     return (
-      <GoogleMap defaultZoom={4} center={{ lat: 39.8283, lng: -98.5795 }}>
+      <GoogleMap defaultZoom={4} center={{ lat: 40.6766, lng: -95.8594 }}>
         {markers}
       </GoogleMap>
     );
