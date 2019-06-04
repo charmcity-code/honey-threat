@@ -14,8 +14,13 @@ class Threats extends Component {
   render() {
     return (
       <div>
-        <MDBTable style={{ width: 550 }} bordered small responsive>
-          <MDBTableHead>
+        <MDBTable
+          style={{ width: 425, background: "#4B515D" }}
+          small
+          bordered
+          responsive
+        >
+          <MDBTableHead style={{ background: "#bdbdbd" }}>
             <tr>
               <th>IP</th>
               <th>Location</th>
