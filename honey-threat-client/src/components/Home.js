@@ -17,11 +17,12 @@ const JumbotronPage = () => {
             </p>
             <hr className='my-2' />
             <p style={{ color: "#3f729b" }}>
-              2019 -{" "}
+              &copy;2019{" "}
               <a
                 style={{ color: "#3f729b" }}
-                href='http://github.com/lulabromark'
+                href='https://github.com/lulabromark'
                 target='_blank'
+                rel='noopener noreferrer'
               >
                 https://github.com/lulabromark
               </a>
