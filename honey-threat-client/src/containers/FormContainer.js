@@ -67,6 +67,7 @@ class ThreatForm extends Component {
           <input
             name='address'
             type='text'
+            placeholder='City and/or State'
             onChange={this.handleOnChange}
             value={this.props.threatFormData.address}
           />{" "}
