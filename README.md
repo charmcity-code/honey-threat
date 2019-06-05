@@ -1,6 +1,6 @@
 # Honey-Threat
 
-A single page React/Redux app utilizing a Rails API back-end.
+A single page React/Redux app utilizing a Rails API back-end.\
 Shows IP addresses gathered from attackers attempting to log into a private honeypot network.
 
 ## Installation
