@@ -1,10 +1,10 @@
 import { resetThreatForm } from "./threatForm";
 // localhost
-// const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = process.env.REACT_APP_API_URL;
 
 // heroku
-const API_URL =
-  "https://cors-anywhere.herokuapp.com/https://honey-threat-api.herokuapp.com/api";
+// const API_URL =
+//   "https://cors-anywhere.herokuapp.com/https://honey-threat-api.herokuapp.com/api";
 
 // action creators
 const setThreats = threats => {
