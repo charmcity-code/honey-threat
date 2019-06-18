@@ -1,5 +1,7 @@
 import React from "react";
 import { MDBJumbotron, MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import CommentState from "../CommentState";
+import CommentView from "./CommentView";
 
 const JumbotronPage = () => {
   return (
@@ -30,6 +32,8 @@ const JumbotronPage = () => {
           </MDBJumbotron>
         </MDBCol>
       </MDBRow>
+      <CommentState />
+      <CommentView />
     </MDBContainer>
   );
 };
