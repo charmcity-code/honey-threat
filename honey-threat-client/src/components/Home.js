@@ -1,6 +1,6 @@
 import React from "react";
 import { MDBJumbotron, MDBContainer, MDBRow, MDBCol } from "mdbreact";
-import CommentState from "../CommentState";
+import CommentState from "../CommentsState";
 import CommentView from "./CommentView";
 
 const JumbotronPage = () => {
